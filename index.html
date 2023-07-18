@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form action="/generate_qr" method="POST">
+        <label for="message">Enter your message:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
